@@ -1,56 +1,57 @@
 /* ================================================================
-   LLM Wiki Manager — Apple Human Interface Design Language
+   LLM Wiki Manager — Archive Room · 档案馆美学
+   暖调象牙白 / 皮革棕 / 深蓝灰 · 知识工具的沉静质感
    ================================================================ */
 
 /* ----- Design Tokens ----- */
 :root {
-  /* Accent */
-  --blue: #007AFF;
-  --blue-hover: #0062CC;
-  --blue-pressed: #004999;
-  --blue-subtle: rgba(0, 122, 255, 0.10);
-  --blue-subtle-hover: rgba(0, 122, 255, 0.16);
+  /* Accent — 深蓝灰 (scholarly teal-slate) */
+  --blue: #3A5F6B;
+  --blue-hover: #2E4F59;
+  --blue-pressed: #1F3A43;
+  --blue-subtle: rgba(58, 95, 107, 0.10);
+  --blue-subtle-hover: rgba(58, 95, 107, 0.18);
 
-  --green: #34C759;
-  --green-subtle: rgba(52, 199, 89, 0.14);
-  --red: #FF3B30;
-  --red-subtle: rgba(255, 59, 48, 0.12);
-  --orange: #FF9500;
+  --green: #6B8B6D;
+  --green-subtle: rgba(107, 139, 109, 0.16);
+  --red: #C44536;
+  --red-subtle: rgba(196, 69, 54, 0.12);
+  --orange: #C47A3A;
 
-  /* Labels (Apple's dynamic label colors, light mode) */
-  --label-primary:   rgba(0, 0, 0, 0.92);
-  --label-secondary: rgba(0, 0, 0, 0.60);
-  --label-tertiary:  rgba(0, 0, 0, 0.36);
-  --label-quaternary: rgba(0, 0, 0, 0.18);
+  /* Labels */
+  --label-primary:   rgba(30, 27, 24, 0.94);
+  --label-secondary: rgba(30, 27, 24, 0.58);
+  --label-tertiary:  rgba(30, 27, 24, 0.34);
+  --label-quaternary: rgba(30, 27, 24, 0.16);
 
   /* Fills */
-  --fill-primary:    rgba(120, 120, 128, 0.12);
-  --fill-secondary:  rgba(120, 120, 128, 0.08);
-  --fill-tertiary:   rgba(120, 120, 128, 0.06);
+  --fill-primary:    rgba(120, 110, 100, 0.14);
+  --fill-secondary:  rgba(120, 110, 100, 0.08);
+  --fill-tertiary:   rgba(120, 110, 100, 0.05);
 
-  /* Backgrounds */
-  --bg-window:       #F5F5F7;
-  --bg-elevated:     #FFFFFF;
-  --bg-embedded:     #FAFAFA;
+  /* Backgrounds — 象牙纸色系 */
+  --bg-window:       #F7F4ED;
+  --bg-elevated:     #FFFCF7;
+  --bg-embedded:     #F5F1E8;
 
-  /* Materials (vibrancy) */
-  --material-regular:   rgba(255, 255, 255, 0.70);
-  --material-thick:     rgba(255, 255, 255, 0.88);
-  --material-thin:      rgba(255, 255, 255, 0.52);
+  /* Materials */
+  --material-regular:   rgba(255, 252, 247, 0.72);
+  --material-thick:     rgba(255, 252, 247, 0.90);
+  --material-thin:      rgba(255, 252, 247, 0.54);
 
   /* Separators */
-  --separator:        rgba(60, 60, 67, 0.12);
-  --separator-opaque: #E5E5EA;
+  --separator:        rgba(30, 27, 24, 0.10);
+  --separator-opaque: #E8E3D8;
 
-  /* Shadows (multi-layer for depth) */
+  /* Shadows — 暖调阴影 */
   --shadow-none:  0 0 0 transparent;
-  --shadow-xs:    0 0.5px 1px rgba(0, 0, 0, 0.04);
-  --shadow-sm:    0 0.5px 1.5px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.06);
-  --shadow-md:    0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 14px rgba(0, 0, 0, 0.08);
-  --shadow-lg:    0 2px 6px rgba(0, 0, 0, 0.04), 0 10px 30px rgba(0, 0, 0, 0.11);
-  --shadow-xl:    0 4px 12px rgba(0, 0, 0, 0.05), 0 20px 50px rgba(0, 0, 0, 0.14);
+  --shadow-xs:    0 0.5px 1px rgba(30, 27, 24, 0.04);
+  --shadow-sm:    0 0.5px 1.5px rgba(30, 27, 24, 0.04), 0 1px 4px rgba(30, 27, 24, 0.05);
+  --shadow-md:    0 1px 3px rgba(30, 27, 24, 0.03), 0 4px 14px rgba(30, 27, 24, 0.06);
+  --shadow-lg:    0 2px 6px rgba(30, 27, 24, 0.03), 0 10px 30px rgba(30, 27, 24, 0.08);
+  --shadow-xl:    0 4px 12px rgba(30, 27, 24, 0.04), 0 20px 50px rgba(30, 27, 24, 0.10);
 
-  /* Radii (Apple's standard corner radii) */
+  /* Radii */
   --r-xs:   4px;
   --r-sm:   6px;
   --r-md:   8px;
@@ -60,12 +61,13 @@
   --r-3xl:  20px;
   --r-4xl:  24px;
 
-  /* Typography Family */
+  /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
                "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-serif: "Iowan Old Style", "Georgia", "Noto Serif SC", "Songti SC", "SimSun", serif;
   --font-mono: "SF Mono", "Menlo", ui-monospace, "Cascadia Code", "Consolas", monospace;
 
-  /* Typography Scale (Apple HIG) */
+  /* Typography Scale */
   --text-caption2: 11px;
   --text-caption1: 12px;
   --text-footnote: 13px;
@@ -76,7 +78,7 @@
   --text-title3:   20px;
   --text-title2:   22px;
   --text-title1:   28px;
-  --text-large:    34px;
+  --text-large:    36px;
 
   /* Font Weights */
   --wt-regular:  400;
@@ -84,20 +86,19 @@
   --wt-semibold: 590;
   --wt-bold:     700;
 
-  /* Easing Curves */
+  /* Easing */
   --ease-default:  cubic-bezier(0.25, 0.10, 0.25, 1.00);
   --ease-out:      cubic-bezier(0.00, 0.00, 0.58, 1.00);
   --ease-in:       cubic-bezier(0.42, 0.00, 1.00, 1.00);
   --ease-in-out:   cubic-bezier(0.42, 0.00, 0.58, 1.00);
   --spring-smooth: cubic-bezier(0.22, 0.98, 0.32, 1.08);
-  --spring-bouncy: cubic-bezier(0.18, 1.02, 0.24, 1.10);
 
-  /* Motion Durations */
+  /* Motion */
   --dur-instant:   80ms;
   --dur-fast:      160ms;
   --dur-normal:    240ms;
   --dur-slow:      360ms;
-  --dur-spring:    420ms;
+  --dur-step:      500ms;
 }
 
 /* ----- Reset & Base ----- */
@@ -113,16 +114,16 @@ body {
   min-height: 100vh;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 80% 60% at 5% 5%,   rgba(0, 122, 255, 0.10), transparent 50%),
-    radial-gradient(ellipse 50% 50% at 90% 15%, rgba(52, 199, 89, 0.07),  transparent 45%),
-    radial-gradient(ellipse 60% 50% at 50% 95%, rgba(120, 120, 128, 0.04), transparent 40%),
-    linear-gradient(180deg, #FAFAFC 0%, #F2F2F5 40%, #EEEEF2 100%);
+    radial-gradient(ellipse 70% 50% at 10% 5%,  rgba(196, 122, 58, 0.06), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 85% 20%, rgba(58, 95, 107, 0.05),  transparent 50%),
+    radial-gradient(ellipse 60% 40% at 50% 90%, rgba(107, 139, 109, 0.04), transparent 45%),
+    linear-gradient(175deg, #F9F6EF 0%, #F5F1E8 40%, #F0EBE0 100%);
   color: var(--label-primary);
   font-family: var(--font-sans);
   font-size: var(--text-body);
   font-weight: var(--wt-regular);
   line-height: 1.47059;
-  letter-spacing: -0.022em;
+  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;
@@ -198,22 +199,14 @@ button, input, textarea, select {
 }
 
 .app-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 40px;
   height: 40px;
   flex-shrink: 0;
   border-radius: var(--r-lg);
-  background: linear-gradient(155deg, #1C1C1E 0%, #3A3A3C 50%, #1C1C1E 100%);
-  color: #FFFFFF;
-  font-size: 18px;
-  font-weight: var(--wt-bold);
-  letter-spacing: -0.01em;
+  object-fit: cover;
   box-shadow:
-    inset 0 0.5px 0 rgba(255, 255, 255, 0.20),
-    inset 0 -0.5px 0 rgba(0, 0, 0, 0.30),
-    0 4px 10px rgba(0, 0, 0, 0.18),
+    0 4px 10px rgba(0, 0, 0, 0.14),
     0 0 0 0.5px rgba(0, 0, 0, 0.06);
 }
 
@@ -801,6 +794,12 @@ button:disabled {
   to { transform: rotate(360deg); }
 }
 
+/* Button inline spinner */
+.btn-spin {
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
 .loading-title {
   margin: 0;
   color: var(--label-primary);
@@ -1032,8 +1031,298 @@ button:disabled {
    Selection color
    ================================================================ */
 ::selection {
-  background: rgba(0, 122, 255, 0.22);
+  background: rgba(58, 95, 107, 0.18);
   color: inherit;
+}
+
+/* ================================================================
+   Onboarding — Step Views (Workspace → Config → Main)
+   ================================================================ */
+
+/* ---- Step Transition ---- */
+.step-enter-active,
+.step-leave-active {
+  transition: opacity var(--dur-step) var(--ease-out),
+              transform var(--dur-step) var(--ease-out);
+}
+
+.step-enter-from {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.step-leave-to {
+  opacity: 0;
+  transform: translateY(-12px);
+}
+
+/* ---- Onboarding Shell (full-screen centered) ---- */
+.onboard-shell {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px;
+  overflow-y: auto;
+}
+
+.onboard-card {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 36px;
+  border: 1px solid var(--separator);
+  border-radius: var(--r-3xl);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ---- Onboarding Typography ---- */
+.onboard-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-2xl);
+  background: var(--fill-secondary);
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.onboard-card h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: var(--label-primary);
+}
+
+.onboard-card .onboard-desc {
+  margin: 0;
+  color: var(--label-secondary);
+  font-size: var(--text-subhead);
+  line-height: 1.55;
+}
+
+/* ---- Step Dots ---- */
+.step-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.step-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--fill-primary);
+  transition: all var(--dur-normal) var(--ease-out);
+}
+
+.step-dot.active {
+  width: 24px;
+  background: var(--blue);
+}
+
+.step-dot.done {
+  background: var(--green);
+}
+
+.step-dot-line {
+  width: 24px;
+  height: 1px;
+  background: var(--separator);
+}
+
+/* ---- Workspace Path Display ---- */
+.workspace-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 1px dashed var(--separator);
+  border-radius: var(--r-xl);
+  background: var(--fill-tertiary);
+}
+
+.workspace-card .ws-label {
+  color: var(--label-tertiary);
+  font-size: var(--text-caption1);
+  font-weight: var(--wt-medium);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.workspace-card .ws-path {
+  color: var(--label-primary);
+  font-size: var(--text-footnote);
+  font-family: var(--font-mono);
+  line-height: 1.45;
+  word-break: break-all;
+}
+
+/* ---- Onboarding Buttons ---- */
+.onboard-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.onboard-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 24px;
+  font-size: var(--text-subhead);
+  font-weight: var(--wt-semibold);
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition:
+    background var(--dur-fast) var(--ease-default),
+    box-shadow var(--dur-fast) var(--ease-default),
+    transform var(--dur-instant) var(--ease-default);
+}
+
+.onboard-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.onboard-btn.primary {
+  background: var(--blue);
+  color: #FFFCF7;
+  box-shadow: var(--shadow-md);
+}
+
+.onboard-btn.primary:hover:not(:disabled) {
+  background: var(--blue-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.onboard-btn.primary:active:not(:disabled) {
+  background: var(--blue-pressed);
+  transform: scale(0.985);
+}
+
+.onboard-btn.secondary {
+  border: 1px solid var(--separator);
+  background: var(--bg-elevated);
+  color: var(--label-primary);
+}
+
+.onboard-btn.secondary:hover:not(:disabled) {
+  background: var(--fill-tertiary);
+}
+
+.onboard-btn.ghost {
+  background: transparent;
+  color: var(--label-secondary);
+  font-weight: var(--wt-medium);
+}
+
+.onboard-btn.ghost:hover:not(:disabled) {
+  background: var(--fill-secondary);
+  color: var(--label-primary);
+}
+
+/* ---- Onboarding Form (Model Config) ---- */
+.onboard-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.onboard-form label {
+  display: grid;
+  gap: 5px;
+  color: var(--label-secondary);
+  font-size: var(--text-caption1);
+  font-weight: var(--wt-medium);
+}
+
+.onboard-form input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--separator);
+  border-radius: var(--r-lg);
+  background: var(--bg-elevated);
+  color: var(--label-primary);
+  padding: 0 12px;
+  font-size: var(--text-subhead);
+  outline: none;
+  transition:
+    border-color var(--dur-fast) var(--ease-default),
+    box-shadow var(--dur-fast) var(--ease-default);
+}
+
+.onboard-form input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-subtle);
+}
+
+.onboard-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* ---- Onboarding Footer ---- */
+.onboard-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+  color: var(--label-tertiary);
+  font-size: var(--text-caption1);
+}
+
+.onboard-footer button {
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font-size: var(--text-caption1);
+  font-weight: var(--wt-medium);
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: var(--r-xs);
+}
+
+.onboard-footer button:hover {
+  background: var(--blue-subtle);
+}
+
+/* ---- Test connection feedback ---- */
+.test-result {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: var(--r-md);
+  font-size: var(--text-caption1);
+}
+
+.test-result.success {
+  background: var(--green-subtle);
+  color: var(--green);
+}
+
+.test-result.fail {
+  background: var(--red-subtle);
+  color: var(--red);
 }
 
 /* ================================================================
