@@ -78,12 +78,7 @@ fn select_workspace_dir(app: tauri::AppHandle) -> Result<String, String> {
     let chosen = match dir_path {
         Some(p) => p.to_string(),
         None => {
-            app.path()
-                .app_data_dir()
-                .map_err(|e| e.to_string())?
-                .join("workspace")
-                .to_string_lossy()
-                .to_string()
+            return Err("用户取消了目录选择".to_string());
         }
     };
 
