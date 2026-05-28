@@ -634,7 +634,7 @@ async function guarded(successMessage: string, action: () => Promise<void>) {
     </aside>
 
     <!-- ===== Middle: Page List ===== -->
-    <section class="flex flex-col min-w-0 bg-white">
+    <section class="flex flex-col min-w-0 overflow-hidden bg-white">
       <header class="flex items-center justify-between gap-3 min-h-[52px] px-4 py-3 border-b border-surface-100">
         <div>
           <p class="m-0 mb-0.5 text-[11px] font-semibold tracking-[0.06em] uppercase text-surface-400">{{ pageCountLabel }}</p>
@@ -678,7 +678,7 @@ async function guarded(successMessage: string, action: () => Promise<void>) {
     </section>
 
     <!-- ===== Right: Markdown Preview ===== -->
-    <section class="flex flex-col min-w-0 bg-white">
+    <section class="flex flex-col min-w-0 overflow-hidden bg-white">
       <header class="flex items-center min-h-[52px] px-4 py-3 border-b border-surface-100">
         <div>
           <p class="m-0 mb-0.5 text-[11px] font-semibold tracking-[0.06em] uppercase text-surface-400">Markdown 预览</p>
