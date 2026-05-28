@@ -1,0 +1,16 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+.venv/
+.idea/
+workspace/
+workspace-*/
+node_modules/
+dist/
+target/
+build/
+*.log
+*.spec
+desktop/src-tauri/binaries/*.exe
+desktop/src-tauri/gen/
