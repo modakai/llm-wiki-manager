@@ -35,3 +35,12 @@ export interface WikiPageContent {
   title: string;
   markdown: string;
 }
+
+export interface WorkspaceInfo {
+  path: string;
+  directories: {
+    raw: string;
+    parsed: string;
+    wiki: string;
+  };
+}

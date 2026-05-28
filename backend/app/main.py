@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from app.api import settings, uploads, wiki
+from app.api import settings, uploads, wiki, workspace
 from app.core.paths import WorkspacePaths, default_workspace
 
 
@@ -30,6 +30,7 @@ def create_app(paths: WorkspacePaths | None = None) -> FastAPI:
     app.include_router(settings.router)
     app.include_router(uploads.router)
     app.include_router(wiki.router)
+    app.include_router(workspace.router)
 
     web_dir = __import__("pathlib").Path(__file__).resolve().parent / "web"
     if web_dir.exists():
@@ -39,7 +40,7 @@ def create_app(paths: WorkspacePaths | None = None) -> FastAPI:
     def health() -> dict[str, str]:
         """健康检查接口。"""
 
-        return {"status": "ok"}
+        return {"status": "ok", "workspace": str(app.state.paths.root.resolve())}
 
     @app.get("/")
     def index():

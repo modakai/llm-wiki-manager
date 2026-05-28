@@ -1,4 +1,4 @@
-import type { ModelConfigPayload, ModelConfigView, UploadResult, WikiPage, WikiPageContent } from "../types";
+import type { ModelConfigPayload, ModelConfigView, UploadResult, WikiPage, WikiPageContent, WorkspaceInfo } from "../types";
 
 type FetchLike = typeof fetch;
 
@@ -48,6 +48,14 @@ export class ApiClient {
 
   async loadPage(pageId: string): Promise<WikiPageContent> {
     return this.request<WikiPageContent>(`/api/wiki/pages/${encodeURIComponent(pageId)}`);
+  }
+
+  async healthCheck(): Promise<{ status: string; workspace: string }> {
+    return this.request<{ status: string; workspace: string }>("/api/health");
+  }
+
+  async fetchWorkspaceInfo(): Promise<WorkspaceInfo> {
+    return this.request<WorkspaceInfo>("/api/workspace");
   }
 
   private async request<T>(path: string, init?: RequestInit): Promise<T> {
